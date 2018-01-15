@@ -125,3 +125,16 @@
 .container-list-hotels .container-hotel-detail .hotel-img {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .container-list-hotels .container-hotel-detail .container-detail {
+    border-right: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #eeeeee;
+  }
+  .container-hotels .container-search {
+    padding: 0;
+  }
+}
