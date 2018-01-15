@@ -1,3 +1,92 @@
-<p>
-  hotels works!
-</p>
+<div style="text-align:center">
+  <app-header></app-header>
+  <section class="container-hotels row">
+    <div class="container-search col-lg-3 text-left">
+      <form [formGroup]="searchForm">
+        <p>Filtros</p>
+        <div class="container-input-search">
+          <div class="title position-relative">
+            <app-icon-search></app-icon-search>
+            <span class="color-blue">Nombre del Hotel</span>
+            <span
+              (click)="openFilters('openFilterName')"
+              class="container-icon"
+              [ngClass]="{'icon-close': openFilterName, 'icon-open': !openFilterName}"
+            ></span>
+          </div>
+          <div
+            class="input"
+            [ngClass]="{'open-filter': openFilterName, 'close-filter': !openFilterName}"
+          >
+            <input type="text" placeholder="Ingrese el nombre del hotel" id="search" name="search" formControlName="search">
+            <button
+              (click)="filterHotels()"
+              class="btn btn-primary background-button"
+            >
+              Buscar
+            </button>
+          </div>
+        </div>
+        <div class="container-stars">
+          <div class="title color-blue position-relative">
+            <app-icon-star
+              [stars]="1"
+            ></app-icon-star>
+            <span>Estrellas</span>
+            <span
+              (click)="openFilters('openFilterStar')"
+              class="container-icon"
+              [ngClass]="{'icon-close': openFilterStar, 'icon-open': !openFilterStar}"
+            ></span>
+          </div>
+          <div
+            class="layout-stars"
+            [ngClass]="{'open-filter': openFilterStar, 'close-filter': !openFilterStar}"
+          >
+            <div class="row-start">
+              <input type="checkbox" id="all" name="all" formControlName="all" (change)="selectAndUnselectAll()">
+              <span>Todas las estrellas</span>
+            </div>
+            <div class="row-star" *ngFor="let item of rowsStar; let i = index">
+              <input type="checkbox" id="star{{5 - i}}" name="star{{5 - i}}" formControlName="star{{5 - i}}" (change)="selectStar(5 - i)">
+              <app-icon-star
+                [stars]="5 - i"
+                [size]="20"
+                [color]="febb00"
+              ></app-icon-star>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container-list-hotels col-lg-9">
+      <div class="row container-hotel-detail" *ngFor="let hotel of hotels">
+        <div class="container-img col-lg-4">
+          <img class="hotel-img" src="/assets/images/hotels/{{hotel.image}}" alt="">
+        </div>
+        <div class="container-detail col-lg-5 text-left">
+          <div class="name">
+            <h3>{{hotel.name}}</h3>
+          </div>
+          <div class="stars">
+            <app-icon-star
+              [stars]="hotel.stars"
+              [size]="20"
+              [color]="febb00"
+            ></app-icon-star>
+          </div>
+          <div class="amenities">
+            <figure *ngFor="let amenity of hotel.amenities" class="d-inline-block m-1">
+              <img class="amenity" src="/assets/icons/amenities/{{amenity}}.svg" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="container-price col-lg-3">
+          <p>Precio noche por habitacion</p>
+          <h2 class="color-price">ARS {{hotel.price}}</h2>
+          <button class="btn btn-lg btn-primary background-button">Ver Hotel</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
