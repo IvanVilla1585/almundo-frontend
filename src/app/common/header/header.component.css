@@ -1,0 +1,9 @@
+.header-container {
+  text-align: left;
+  padding: 10px 0;
+  background: #003378;
+}
+
+.header-container figure {
+  margin-left: 30px;
+}
