@@ -1,0 +1,127 @@
+.container-hotels.row {
+  padding: 20px;
+  margin: 0;
+  height: 100vh;
+}
+
+.stars, .row-star {
+  fill: #febb00;
+}
+
+.color-price {
+  color: #e26800;
+}
+
+.container-icon {
+  padding: 8px 10px;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 5px;
+}
+
+.open-filter {
+  display: block;
+  -webkit-transition: display 3s ease-out;
+  -moz-transition: display 3s ease-out;
+  -o-transition: display 3s ease-out;
+  transition: display 3s ease-out;
+}
+
+.close-filter {
+  display: none;
+  -webkit-transition: display 3s ease-out;
+  -moz-transition: display 3s ease-out;
+  -o-transition: display 3s ease-out;
+  transition: display 3s ease-out;
+}
+
+.icon-open:before {
+  content: "";
+  border-top: 10px solid #097ab4;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.icon-close:before {
+  content: "";
+  border-bottom: 10px solid #097ab4;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.background-button {
+  background: #002978;
+  border: 1px solid #002978;
+}
+
+.container-hotels .container-search  p {
+  background: #ffffff;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.container-hotels .container-search .container-input-search {
+  background: #ffffff;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.container-hotels .container-search .container-input-search .title {
+  margin-bottom: 10px;
+  color: #097ab4;
+}
+
+.container-hotels .container-search .container-input-search .input input {
+  height: 38px;
+  padding: 5px;
+  width: 200px;
+}
+
+.container-hotels .container-search .container-stars {
+  background: #ffffff;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.container-hotels .container-search .container-stars .row-star {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-hotels .container-search .container-stars .title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #097ab4;
+  fill: #097ab4;
+}
+
+.container-list-hotels .container-hotel-detail {
+  background: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.container-list-hotels .container-hotel-detail .container-detail {
+  border-right: 3px dotted #eeeeee;
+}
+
+.container-list-hotels .container-hotel-detail .container-detail .amenities .amenity {
+  width: 20px;
+  height: 20px;
+}
+
+.container-list-hotels .container-hotel-detail .container-price {
+  align-self: center;
+}
+
+.container-list-hotels .container-hotel-detail .hotel-img {
+  width: 100%;
+}
