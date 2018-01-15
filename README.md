@@ -6,6 +6,7 @@ test almundo
 - [Git](https://git-scm.com/)
 - [Angular CLI](https://cli.angular.io/)
 - [nodejs 8.9.4 LTS](https://nodejs.org/es/download/) 
+- [clone project almundo-backend](https://github.com/IvanVilla1585/almundo-backend) 
 
 ## Let's get started
 
