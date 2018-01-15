@@ -1,6 +1,18 @@
 # AlmundoFrontend
+test almundo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+## Prerequisites
+
+- [Git](https://git-scm.com/)
+- [Angular CLI](https://cli.angular.io/)
+- [nodejs 8.9.4 LTS](https://nodejs.org/es/download/) 
+
+## Let's get started
+
+- git clone https://github.com/IvanVilla1585/almundo-frontend.git
+- cd almundo-frontend
+- npm install
+- ng serve
 
 ## Development server
 
